@@ -1,4 +1,4 @@
-#include "ReadImgData.h"
+#include "Dataset.h"
 
 Dataset::Dataset(const string& path):_path(path){
     ReadImgs();
