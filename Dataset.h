@@ -11,12 +11,11 @@ using namespace cv;
 
 class Dataset{
 public:
+  string _path;
+  vector<string> _filenames;
+  vector<Mat> _images;
 
-    string _path;
-    vector<string> _filenames;
-    vector<Mat> _images;
-
-    Dataset(const string& path);
-    
-    void ReadImgs();
+  Dataset(const string& path);
+  
+  void ReadImgs();
 };

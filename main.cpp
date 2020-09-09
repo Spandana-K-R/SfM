@@ -27,6 +27,7 @@ int main(int argc, char** argv){
 
   // keypoint detection and extracting decriptors within class SURF
   vector<vector<KeyPoint>> imgpts;
+  vector<vector<KeyPoint>> imgpts_pruned;
   vector<Mat> descriptors;
   
   SURF surf(dataset._images, imgpts, descriptors);  
@@ -39,11 +40,11 @@ int main(int argc, char** argv){
   // }
 
   //
-  FrameManager fm(dataset._images, imgpts, descriptors);
+  FrameManager fm(dataset._images, imgpts, imgpts_pruned, descriptors);
   if (!fm.features_matched_already)
     fm.matchFeatures();
 
+  fm.GetBaseline3D();
 
-  
   return 0;
 }

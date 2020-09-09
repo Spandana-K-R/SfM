@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 project(sfm LANGUAGES CXX)
 
-set (src_files main.cpp Dataset.cpp FrameManager.cpp SURF.cpp)
+set (src_files main.cpp Dataset.cpp FrameManager.cpp SURF.cpp utils.cpp)
 
 find_package(OpenCV REQUIRED PATHS /home/spandana/opencv/lib/cmake)
 
